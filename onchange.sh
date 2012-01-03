@@ -23,6 +23,7 @@ else
 fi
 
 while :; do
-    echo "> ${listener} ${wd}" && ${listenercomplete}
-    echo "> $@" && $@
+    echo "> ${listener} ${wd}" && ${listenercomplete} > /dev/null
+    echo "> $@" && eval $@
+    echo
 done
